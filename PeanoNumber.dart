@@ -9,7 +9,7 @@ class PeanoNumber {
     else
       {
       var t = PeanoNumber.fromInteger(num - 1);
-      return new Succ(t);
+      return new Succ.of(t);
       }
    
   }

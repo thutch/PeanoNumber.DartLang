@@ -4,11 +4,11 @@ class Succ extends PeanoNumber {
    PeanoNumber get pred() => _pred;
    
    Succ(PeanoNumber aPeanoNumber){
-     _pred = aPeanoNumber;
+     this.setPred(aPeanoNumber);
    }
    
   Succ.of(PeanoNumber aPeanoNumber){
-     _pred = aPeanoNumber;
+    this.setPred(aPeanoNumber);
    }
    
    void set setPred(PeanoNumber aPeanoNumber) {

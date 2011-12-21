@@ -12,14 +12,15 @@ class PeanoNumberApp {
     PeanoNumber x, y;
     x = PeanoNumber.fromInteger(3);
     y = PeanoNumber.fromInteger(2);
-    print(x.toString() + " + "+y.toString() + " = "+ x.addPeanoNumber(y).toString());
-    this.write(x.toString() + '+'  + y.toString() + '='+ x.addPeanoNumber(y));
+    print(x.toString() + ' + '+y.toString() + ' = '+ x.addPeanoNumber(y).toString());
+    //this.write('3 + 2 = 5');
+    this.write(x.toString() + ' + '  + y.toString() + ' = '+ x.addPeanoNumber(y));
   }
 
   void write(String message) {
     // the HTML library defines a global "document" variable
     document.query('#status').innerHTML = message;
-    print(message);
+    //print(message);
   }
 }
 

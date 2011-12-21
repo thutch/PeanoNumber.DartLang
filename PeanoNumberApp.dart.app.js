@@ -47190,7 +47190,7 @@ unnamedea61fd$PeanoNumber$Dart.fromInteger$member = function(num){
   }
    else {
     var t = unnamedea61fd$PeanoNumber$Dart.fromInteger$member(SUB$operator(num, 1));
-    return unnamedea61fd$Succ$Dart.Succ$$Factory(t);
+    return unnamedea61fd$Succ$Dart.Succ$of$4$Factory(t);
   }
 }
 ;
@@ -47256,7 +47256,7 @@ unnamedea61fd$PeanoNumberApp$Dart.prototype.run$member = function(){
   x = unnamedea61fd$PeanoNumber$Dart.fromInteger$member(3);
   y = unnamedea61fd$PeanoNumber$Dart.fromInteger$member(2);
   print$getter()(1, $noargs, ADD$operator(ADD$operator(ADD$operator(ADD$operator(x.toString$named(0, $noargs), ' + '), y.toString$named(0, $noargs)), ' = '), x.addPeanoNumber$named(1, $noargs, y).toString$named(0, $noargs)));
-  this.write$named(1, $noargs, ADD$operator(ADD$operator(ADD$operator(ADD$operator(x.toString$named(0, $noargs), '+'), y.toString$named(0, $noargs)), '='), x.addPeanoNumber$named(1, $noargs, y)));
+  this.write$named(1, $noargs, ADD$operator(ADD$operator(ADD$operator(ADD$operator(x.toString$named(0, $noargs), ' + '), y.toString$named(0, $noargs)), ' = '), x.addPeanoNumber$named(1, $noargs, y)));
 }
 ;
 unnamedea61fd$PeanoNumberApp$Dart.prototype.run$named = function($n, $o){
@@ -47268,7 +47268,6 @@ unnamedea61fd$PeanoNumberApp$Dart.prototype.run$named = function($n, $o){
 unnamedea61fd$PeanoNumberApp$Dart.prototype.write$member = function(message){
   var tmp$0;
   htmld071c1$document$getter().query$named(1, $noargs, '#status').innerHTML$setter(tmp$0 = message) , tmp$0;
-  print$getter()(1, $noargs, message);
 }
 ;
 unnamedea61fd$PeanoNumberApp$Dart.prototype.write$named = function($n, $o, message){
@@ -47299,8 +47298,7 @@ unnamedea61fd$Succ$Dart.$addTo = function(target){
 ;
 unnamedea61fd$Succ$Dart.$Constructor = function(aPeanoNumber){
   unnamedea61fd$PeanoNumber$Dart.$Constructor.call(this);
-  var tmp$0;
-  this._pred$unnamedea61fd$$setter_(tmp$0 = aPeanoNumber) , tmp$0;
+  this.setPred$named(1, $noargs, aPeanoNumber);
 }
 ;
 unnamedea61fd$Succ$Dart.$Initializer = function(aPeanoNumber){
@@ -47315,12 +47313,29 @@ unnamedea61fd$Succ$Dart.Succ$$Factory = function(aPeanoNumber){
   return tmp$0;
 }
 ;
+unnamedea61fd$Succ$Dart.of$Constructor = function(aPeanoNumber){
+  unnamedea61fd$PeanoNumber$Dart.$Constructor.call(this);
+  this.setPred$named(1, $noargs, aPeanoNumber);
+}
+;
+unnamedea61fd$Succ$Dart.of$Initializer = function(aPeanoNumber){
+  unnamedea61fd$PeanoNumber$Dart.$Initializer.call(this);
+}
+;
+unnamedea61fd$Succ$Dart.Succ$of$4$Factory = function(aPeanoNumber){
+  var tmp$0 = new unnamedea61fd$Succ$Dart;
+  tmp$0.$typeInfo = unnamedea61fd$Succ$Dart.$lookupRTT();
+  unnamedea61fd$Succ$Dart.of$Initializer.call(tmp$0, aPeanoNumber);
+  unnamedea61fd$Succ$Dart.of$Constructor.call(tmp$0, aPeanoNumber);
+  return tmp$0;
+}
+;
 unnamedea61fd$Succ$Dart.prototype._pred$unnamedea61fd$$getter_ = function(){
   return this._pred$unnamedea61fd$$field_;
 }
 ;
-unnamedea61fd$Succ$Dart.prototype._pred$unnamedea61fd$$setter_ = function(tmp$0){
-  this._pred$unnamedea61fd$$field_ = tmp$0;
+unnamedea61fd$Succ$Dart.prototype.setPred$named = function(){
+  return this.setPred$getter().apply(this, arguments);
 }
 ;
 unnamedea61fd$Succ$Dart.prototype.toString$member = function(){
