@@ -18,7 +18,7 @@ class Succ extends PeanoNumber {
    String toString(){
      StringBuffer buffer = new StringBuffer();
      buffer.add('succ(');
-     _pred.toString();
+     buffer.add(_pred.toString());
      buffer.add(')');
      return buffer.toString();
    }

@@ -47184,7 +47184,7 @@ unnamedea61fd$PeanoNumber$Dart.$addTo = function(target){
 }
 ;
 unnamedea61fd$PeanoNumber$Dart.fromInteger$member = function(num){
-  print$getter()(1, $noargs, '' + $toString(num) + '');
+  print$getter()(1, $noargs, 'fromInteger: ' + $toString(num) + '');
   if (EQ$operator(num, 0)) {
     return unnamedea61fd$Zero$Dart.Zero$$Factory();
   }
@@ -47212,6 +47212,16 @@ unnamedea61fd$PeanoNumber$Dart.prototype.succ$named = function($n, $o){
   if ($o.count || $n != 0)
     $nsme();
   return unnamedea61fd$PeanoNumber$Dart.prototype.succ$member.call(this);
+}
+;
+unnamedea61fd$PeanoNumber$Dart.prototype.toString$member = function(){
+  return 'Should not get here';
+}
+;
+unnamedea61fd$PeanoNumber$Dart.prototype.toString$named = function($n, $o){
+  if ($o.count || $n != 0)
+    $nsme();
+  return unnamedea61fd$PeanoNumber$Dart.prototype.toString$member.call(this);
 }
 ;
 unnamedea61fd$PeanoNumber$Dart.$Constructor = function(){
@@ -47245,6 +47255,7 @@ unnamedea61fd$PeanoNumberApp$Dart.prototype.run$member = function(){
   var y = $Dart$Null;
   x = unnamedea61fd$PeanoNumber$Dart.fromInteger$member(3);
   y = unnamedea61fd$PeanoNumber$Dart.fromInteger$member(2);
+  print$getter()(1, $noargs, ADD$operator(ADD$operator(ADD$operator(ADD$operator(x.toString$named(0, $noargs), ' + '), y.toString$named(0, $noargs)), ' = '), x.addPeanoNumber$named(1, $noargs, y).toString$named(0, $noargs)));
   this.write$named(1, $noargs, ADD$operator(ADD$operator(ADD$operator(ADD$operator(x.toString$named(0, $noargs), '+'), y.toString$named(0, $noargs)), '='), x.addPeanoNumber$named(1, $noargs, y)));
 }
 ;
@@ -47257,6 +47268,7 @@ unnamedea61fd$PeanoNumberApp$Dart.prototype.run$named = function($n, $o){
 unnamedea61fd$PeanoNumberApp$Dart.prototype.write$member = function(message){
   var tmp$0;
   htmld071c1$document$getter().query$named(1, $noargs, '#status').innerHTML$setter(tmp$0 = message) , tmp$0;
+  print$getter()(1, $noargs, message);
 }
 ;
 unnamedea61fd$PeanoNumberApp$Dart.prototype.write$named = function($n, $o, message){
@@ -47314,7 +47326,7 @@ unnamedea61fd$Succ$Dart.prototype._pred$unnamedea61fd$$setter_ = function(tmp$0)
 unnamedea61fd$Succ$Dart.prototype.toString$member = function(){
   var buffer = StringBufferImpl$Dart.StringBufferImpl$$Factory('');
   buffer.add$named(1, $noargs, 'succ(');
-  this._pred$unnamedea61fd$$getter_().toString$named(0, $noargs);
+  buffer.add$named(1, $noargs, this._pred$unnamedea61fd$$getter_().toString$named(0, $noargs));
   buffer.add$named(1, $noargs, ')');
   return buffer.toString$named(0, $noargs);
 }
